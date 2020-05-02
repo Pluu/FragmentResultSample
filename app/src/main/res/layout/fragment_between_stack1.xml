@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#673AB7"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".stack.BetweenStack1Fragment">
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:minHeight="50dp"
+        android:padding="10dp"
+        android:text="Stack1 ~ Receive : wait" />
+
+    <fragment
+        android:id="@+id/container1"
+        android:name="com.pluu.fragmentresult.sample.stack.BetweenStack2Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        tools:background="#CCC" />
+
+</LinearLayout>
