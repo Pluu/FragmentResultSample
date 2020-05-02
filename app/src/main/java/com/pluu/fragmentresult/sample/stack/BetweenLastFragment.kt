@@ -1,15 +1,18 @@
-package com.pluu.fragmentresult.sample
+package com.pluu.fragmentresult.sample.stack
 
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
+import com.pluu.fragmentresult.sample.R
+import com.pluu.fragmentresult.sample.ResultConstract
 import com.pluu.fragmentresult.sample.databinding.FragmentBetweenLastBinding
 
 class BetweenLastFragment : Fragment(R.layout.fragment_between_last) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val binding = FragmentBetweenLastBinding.bind(view)
         binding.btnConfirm.setOnClickListener {
             setFragmentResult(

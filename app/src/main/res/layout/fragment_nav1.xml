@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".navigation.Nav1Fragment">
+
+    <TextView
+        android:id="@+id/tvResult"
+        style="@style/TextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stack1 ~ Receive : wait" />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/ConfirmStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#00BFA5"
+        android:text="Click Next" />
+
+    <Button
+        android:id="@+id/btnExit"
+        style="@style/ConfirmStyle.Exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Exit" />
+
+</LinearLayout>

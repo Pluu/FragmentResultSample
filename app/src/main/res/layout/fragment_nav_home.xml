@@ -3,23 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_vertical"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".stack.BetweenStack1Fragment">
+    tools:context=".navigation.NavHomeFragment">
 
     <TextView
-        android:id="@+id/tvLabel"
+        android:id="@+id/tvResult"
         style="@style/TextLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Root ~ Receive : wait" />
+        android:text="Home ~ Receive : wait" />
 
-    <fragment
-        android:id="@+id/container"
-        android:name="com.pluu.fragmentresult.sample.stack.BetweenStack1Fragment"
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/ConfirmStyle"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#B00020"
+        android:text="Click Next" />
 
 </LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.pluu.fragmentresult.sample.navigation.NavHomeFragment"
+        tools:layout="@layout/fragment_nav_home">
+        <action
+            android:id="@+id/action_to_nav1"
+            app:destination="@id/nav1"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav1"
+        android:name="com.pluu.fragmentresult.sample.navigation.Nav1Fragment"
+        tools:layout="@layout/fragment_nav1">
+        <action
+            android:id="@+id/action_to_nav2"
+            app:destination="@id/last"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/last"
+        android:name="com.pluu.fragmentresult.sample.navigation.NavLastFragment"
+        tools:layout="@layout/fragment_nav_last" />
+</navigation>

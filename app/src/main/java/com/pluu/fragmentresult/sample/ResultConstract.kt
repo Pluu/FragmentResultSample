@@ -1,7 +1,7 @@
 package com.pluu.fragmentresult.sample
 
 object ResultConstract {
-    val keyRoot = "root"
-    val keyStack1 = "stack1"
-    val keyStack2 = "stack2"
+    const val keyRoot = "root"
+    const val keyStack1 = "stack1"
+    const val keyStack2 = "stack2"
 }

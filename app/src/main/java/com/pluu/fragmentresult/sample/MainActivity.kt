@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.pluu.composer.add
 import com.pluu.composer.button
 import com.pluu.composer.setContentView
+import com.pluu.fragmentresult.sample.navigation.NavActivity
 import com.pluu.fragmentresult.sample.stack.BetweenStackActivity
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,9 @@ class MainActivity : AppCompatActivity() {
         setContentView {
             add(::LinearLayout) {
                 orientation = LinearLayout.VERTICAL
+                button("Navigation Style") {
+                    startActivity(Intent(this@MainActivity, NavActivity::class.java))
+                }
                 button("Crazy Stack ~ Between parent/child") {
                     startActivity(Intent(this@MainActivity, BetweenStackActivity::class.java))
                 }

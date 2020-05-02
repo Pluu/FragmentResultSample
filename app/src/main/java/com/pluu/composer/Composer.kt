@@ -10,7 +10,6 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.view.ViewManager
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.fragment.app.Fragment
 
