@@ -54,7 +54,7 @@ val ViewManager.context
 fun <VM : ViewManager, V : View> VM.add(
     construct: (Context) -> V,
     width: Int = MATCH_PARENT,
-    height: Int= WRAP_CONTENT,
+    height: Int = WRAP_CONTENT,
     init: V.() -> Unit
 ) {
     construct(context).apply(init).also {
@@ -62,17 +62,23 @@ fun <VM : ViewManager, V : View> VM.add(
     }
 }
 
-fun ViewManager.text(txt: String) {
+fun ViewManager.text(text: String) {
     add(::TextView) {
-        text = txt
+        this.text = text
         transformationMethod = null
     }
 }
 
-fun ViewManager.button(txt: String, color: Int = Color.LTGRAY, listener: (View) -> Unit) {
+fun ViewManager.button(
+    text: String,
+    color: Int = Color.LTGRAY,
+    measureResult: Button.() -> Unit = {},
+    listener: (View) -> Unit
+) {
     add(::Button) {
-        text = txt
+        this.text = text
         transformationMethod = null
+        measureResult(this)
 
         val bgDrawable = DrawableCompat.wrap(background)
         DrawableCompat.setTint(bgDrawable, color)

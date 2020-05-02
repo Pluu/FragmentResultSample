@@ -16,11 +16,10 @@
 
     <Button
         android:id="@+id/btnConfirm"
-        style="@style/ConfirmStyle"
+        style="@style/ConfirmStyle.Confirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:backgroundTint="#0288D1"
         android:text="Send Result" />
 
 </FrameLayout>
