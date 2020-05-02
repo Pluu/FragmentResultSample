@@ -23,5 +23,4 @@
         android:backgroundTint="#0288D1"
         android:text="Send Result" />
 
-
 </FrameLayout>

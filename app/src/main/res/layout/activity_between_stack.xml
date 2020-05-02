@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Root ~ Receive : wait" />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
         android:name="com.pluu.fragmentresult.sample.stack.BetweenStack1Fragment"
         android:layout_width="match_parent"

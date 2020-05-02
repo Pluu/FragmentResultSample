@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.pluu.fragmentresult.sample.R
 import com.pluu.fragmentresult.sample.ResultConstract
 import com.pluu.fragmentresult.sample.databinding.FragmentNavLastBinding
+import com.pluu.util.toast
 import com.pluu.util.viewBinding
 
 class NavLastFragment : Fragment(R.layout.fragment_nav_last) {
@@ -30,6 +31,8 @@ class NavLastFragment : Fragment(R.layout.fragment_nav_last) {
                 ResultConstract.keyStack2,
                 bundleOf("key_string" to "==> stack2", "Int" to 3)
             )
+
+            toast("Done, result set")
         }
 
         binding.btnExit.setOnClickListener {
