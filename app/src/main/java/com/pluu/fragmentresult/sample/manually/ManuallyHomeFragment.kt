@@ -30,7 +30,7 @@ class ManuallyHomeFragment : Fragment(R.layout.fragment_manually_home) {
             binding.tvResult.text = result.prettyString
         }
 
-        setFragmentResultListener(ResultConstract.keyStack2) { _, result ->
+        setFragmentResultListener(ResultConstract.keyUnused) { _, result ->
             toast("Unused key ==> ${result.prettyString}")
         }
     }

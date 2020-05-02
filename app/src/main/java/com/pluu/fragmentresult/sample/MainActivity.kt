@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             val defaultButtonStyle: Button.() -> Unit = {
                 val buttonMinHeight = dp2Px(60f)
                 minimumHeight = buttonMinHeight
-                textSize = 16f
+                textSize = 18f
             }
             add(::LinearLayout) {
                 orientation = LinearLayout.VERTICAL

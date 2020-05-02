@@ -28,8 +28,8 @@ class ManuallyLastFragment : Fragment(R.layout.fragment_manually_last) {
                 bundleOf("key_string" to "==> stack1", "Int" to 2)
             )
             setFragmentResult(
-                ResultConstract.keyStack2,
-                bundleOf("key_string" to "==> stack2", "Int" to 3)
+                ResultConstract.keyUnused,
+                bundleOf("key_string" to "==> keyUnused", "Int" to 3)
             )
 
             toast("Done, result set")

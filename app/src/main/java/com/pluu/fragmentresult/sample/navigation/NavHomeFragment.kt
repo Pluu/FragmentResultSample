@@ -27,7 +27,7 @@ class NavHomeFragment : Fragment(R.layout.fragment_nav_home) {
             binding.tvResult.text = result.prettyString
         }
 
-        setFragmentResultListener(ResultConstract.keyStack2) { _, result ->
+        setFragmentResultListener(ResultConstract.keyUnused) { _, result ->
             toast("Unused key ==> ${result.prettyString}")
         }
     }

@@ -5,9 +5,11 @@ import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
+import androidx.fragment.app.setFragmentResultListener
 import com.pluu.fragmentresult.sample.R
 import com.pluu.fragmentresult.sample.ResultConstract
 import com.pluu.fragmentresult.sample.databinding.FragmentBetweenLastBinding
+import com.pluu.util.prettyString
 
 class BetweenLastFragment : Fragment(R.layout.fragment_between_last) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -27,6 +29,14 @@ class BetweenLastFragment : Fragment(R.layout.fragment_between_last) {
                 ResultConstract.keyStack2,
                 bundleOf("key_string" to "==> stack2", "Int" to 3)
             )
+            setFragmentResult(
+                "current",
+                bundleOf("key_string" to "==> current", "Int" to 4)
+            )
+        }
+
+        setFragmentResultListener("current") { _, result ->
+            binding.tvLabel.text = result.prettyString
         }
     }
 }
