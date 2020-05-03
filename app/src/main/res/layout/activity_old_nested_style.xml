@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#01579B"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".old.nested.OldStyleActivity">
+
+    <TextView
+        android:id="@+id/tvLabel"
+        style="@style/TextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity ~ Receive : wait" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container"
+        android:name="com.pluu.fragmentresult.sample.old.nested.OldNestedStep1Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

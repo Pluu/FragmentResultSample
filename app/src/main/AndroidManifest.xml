@@ -27,6 +27,9 @@
         <activity
             android:name=".manually.ManuallyActivity"
             android:label="Manually" />
+        <activity
+            android:name=".old.nested.OldStyleActivity"
+            android:label="Old ~ Nested Style" />
     </application>
 
 </manifest>

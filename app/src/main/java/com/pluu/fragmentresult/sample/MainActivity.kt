@@ -11,6 +11,7 @@ import com.pluu.composer.button
 import com.pluu.composer.setContentView
 import com.pluu.fragmentresult.sample.manually.ManuallyActivity
 import com.pluu.fragmentresult.sample.navigation.NavActivity
+import com.pluu.fragmentresult.sample.old.nested.OldStyleActivity
 import com.pluu.fragmentresult.sample.stack.BetweenStackActivity
 import com.pluu.util.dp2Px
 
@@ -27,6 +28,12 @@ class MainActivity : AppCompatActivity() {
             add(::LinearLayout) {
                 orientation = LinearLayout.VERTICAL
                 setPadding(dp2Px(10f))
+                button(
+                    text = "Old ~ Nested Style",
+                    measureResult = defaultButtonStyle
+                ) {
+                    startActivity(Intent(this@MainActivity, OldStyleActivity::class.java))
+                }
                 button(
                     text = "Manually Style",
                     bgColor = 0xFF81D4FA.toInt(),
