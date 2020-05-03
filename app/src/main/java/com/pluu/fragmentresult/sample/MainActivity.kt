@@ -10,6 +10,7 @@ import androidx.core.view.setPadding
 import com.pluu.composer.add
 import com.pluu.composer.button
 import com.pluu.composer.setContentView
+import com.pluu.fragmentresult.sample.dialog.DialogFragmentActivity
 import com.pluu.fragmentresult.sample.flexible.FlexibleStyleActivity
 import com.pluu.fragmentresult.sample.manually.ManuallyActivity
 import com.pluu.fragmentresult.sample.navigation.NavActivity
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, OldStyleActivity::class.java))
         }
         button(
-            text = "Old ~ TargetFragment",
+            text = "Old ~ TargetFragment\nDialogFragment",
             measureResult = defaultButtonStyle
         ) {
             startActivity(Intent(this@MainActivity, OldTargetFragmentActivity::class.java))
@@ -63,13 +64,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun LinearLayout.bindNewPattern(defaultButtonStyle: Button.() -> Unit) {
         button(
-            text = "Flexible Style",
-            bgColor = 0xFF81D4FA.toInt(),
-            measureResult = defaultButtonStyle
-        ) {
-            startActivity(Intent(this@MainActivity, FlexibleStyleActivity::class.java))
-        }
-        button(
             text = "Manually Style",
             bgColor = 0xFF81D4FA.toInt(),
             measureResult = defaultButtonStyle
@@ -77,11 +71,25 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, ManuallyActivity::class.java))
         }
         button(
+            text = "Flexible Style",
+            bgColor = 0xFF81D4FA.toInt(),
+            measureResult = defaultButtonStyle
+        ) {
+            startActivity(Intent(this@MainActivity, FlexibleStyleActivity::class.java))
+        }
+        button(
             text = "Navigation Style",
             bgColor = 0xFF81D4FA.toInt(),
             measureResult = defaultButtonStyle
         ) {
             startActivity(Intent(this@MainActivity, NavActivity::class.java))
+        }
+        button(
+            text = "DialogFragment",
+            bgColor = 0xFF81D4FA.toInt(),
+            measureResult = defaultButtonStyle
+        ) {
+            startActivity(Intent(this@MainActivity, DialogFragmentActivity::class.java))
         }
         button(
             text = "Crazy Stack ~ Between parent/child",

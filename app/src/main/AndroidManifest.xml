@@ -31,12 +31,16 @@
             android:name=".manually.ManuallyActivity"
             android:label="Manually" />
         <activity
+            android:name=".dialog.DialogFragmentActivity"
+            android:label="DialogFragment" />
+        <activity
             android:name=".old.flexible.OldFlexibleStyleActivity"
             android:label="Old ~ Flexible Style" />
         <activity
             android:name=".old.nested.OldStyleActivity"
             android:label="Old ~ Nested Style" />
-        <activity android:name=".old.targetfragment.OldTargetFragmentActivity"
+        <activity
+            android:name=".old.targetfragment.OldTargetFragmentActivity"
             android:label="Old ~ TargetFragment" />
     </application>
 
