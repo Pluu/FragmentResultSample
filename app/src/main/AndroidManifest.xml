@@ -20,16 +20,13 @@
         </activity>
         <activity
             android:name=".stack.BetweenStackActivity"
-            android:label="Between Stack"
-            android:theme="@style/Theme.Base" />
+            android:label="Between Stack" />
         <activity
             android:name=".navigation.NavActivity"
-            android:label="Navigation Style"
-            android:theme="@style/Theme.Base" />
+            android:label="Navigation Style" />
         <activity
             android:name=".manually.ManuallyActivity"
-            android:label="Manually"
-            android:theme="@style/Theme.Base" />
+            android:label="Manually" />
     </application>
 
 </manifest>
