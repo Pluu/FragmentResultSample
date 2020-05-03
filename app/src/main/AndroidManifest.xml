@@ -28,6 +28,9 @@
             android:name=".manually.ManuallyActivity"
             android:label="Manually" />
         <activity
+            android:name=".old.flexible.OldFlexibleStyleActivity"
+            android:label="Old ~ Flexible Style" />
+        <activity
             android:name=".old.nested.OldStyleActivity"
             android:label="Old ~ Nested Style" />
     </application>
