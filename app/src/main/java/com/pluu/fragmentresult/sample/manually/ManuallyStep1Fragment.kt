@@ -10,7 +10,7 @@ import com.pluu.fragmentresult.sample.ResultConstract
 import com.pluu.fragmentresult.sample.databinding.FragmentManuallyStep1Binding
 import com.pluu.util.prettyString
 import com.pluu.util.toast
-import com.pluu.util.viewBinding
+import com.pluu.util.viewbinding.viewBinding
 
 class ManuallyStep1Fragment : Fragment(R.layout.fragment_manually_step1) {
 

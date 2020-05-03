@@ -10,7 +10,7 @@ import com.pluu.fragmentresult.sample.R
 import com.pluu.fragmentresult.sample.ResultConstract
 import com.pluu.fragmentresult.sample.databinding.FragmentNavStepLastBinding
 import com.pluu.util.toast
-import com.pluu.util.viewBinding
+import com.pluu.util.viewbinding.viewBinding
 
 class NavStepLastFragment : Fragment(R.layout.fragment_nav_step_last) {
 

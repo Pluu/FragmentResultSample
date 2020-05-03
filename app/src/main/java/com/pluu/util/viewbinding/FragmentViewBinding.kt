@@ -1,4 +1,4 @@
-package com.pluu.util
+package com.pluu.util.viewbinding
 
 import android.view.View
 import androidx.fragment.app.Fragment

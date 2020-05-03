@@ -10,7 +10,7 @@ import com.pluu.fragmentresult.sample.ResultConstract
 import com.pluu.fragmentresult.sample.databinding.FragmentNavStep1Binding
 import com.pluu.util.prettyString
 import com.pluu.util.toast
-import com.pluu.util.viewBinding
+import com.pluu.util.viewbinding.viewBinding
 
 class NavStep1Fragment : Fragment(R.layout.fragment_nav_step1) {
 

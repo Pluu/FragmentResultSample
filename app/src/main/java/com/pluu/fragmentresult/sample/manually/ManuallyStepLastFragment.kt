@@ -9,7 +9,7 @@ import com.pluu.fragmentresult.sample.R
 import com.pluu.fragmentresult.sample.ResultConstract
 import com.pluu.fragmentresult.sample.databinding.FragmentManuallyStepLastBinding
 import com.pluu.util.toast
-import com.pluu.util.viewBinding
+import com.pluu.util.viewbinding.viewBinding
 
 class ManuallyStepLastFragment : Fragment(R.layout.fragment_manually_step_last) {
 
