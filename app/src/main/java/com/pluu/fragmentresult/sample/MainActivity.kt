@@ -14,6 +14,7 @@ import com.pluu.fragmentresult.sample.dialog.DialogFragmentActivity
 import com.pluu.fragmentresult.sample.flexible.FlexibleStyleActivity
 import com.pluu.fragmentresult.sample.manually.ManuallyActivity
 import com.pluu.fragmentresult.sample.navigation.NavActivity
+import com.pluu.fragmentresult.sample.old.basic.OldBasicActivity
 import com.pluu.fragmentresult.sample.old.flexible.OldFlexibleStyleActivity
 import com.pluu.fragmentresult.sample.old.nested.OldStyleActivity
 import com.pluu.fragmentresult.sample.old.targetfragment.OldTargetFragmentActivity
@@ -42,6 +43,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun LinearLayout.bindOldPattern(defaultButtonStyle: Button.() -> Unit) {
+        button(
+            text = "Old ~ Basic Style",
+            measureResult = defaultButtonStyle
+        ) {
+            startActivity(Intent(this@MainActivity, OldBasicActivity::class.java))
+        }
         button(
             text = "Old ~ Flexible Style",
             measureResult = defaultButtonStyle

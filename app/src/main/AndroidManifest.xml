@@ -33,6 +33,10 @@
         <activity
             android:name=".dialog.DialogFragmentActivity"
             android:label="DialogFragment" />
+
+        <activity
+            android:name=".old.basic.OldBasicActivity"
+            android:label="Old ~ Basic" />
         <activity
             android:name=".old.flexible.OldFlexibleStyleActivity"
             android:label="Old ~ Flexible Style" />
