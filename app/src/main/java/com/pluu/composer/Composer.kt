@@ -2,6 +2,7 @@ package com.pluu.composer
 
 import android.app.Activity
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.View
 import android.view.ViewGroup
@@ -9,9 +10,8 @@ import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.view.ViewManager
 import android.widget.Button
-import android.widget.TextView
-import androidx.core.graphics.drawable.DrawableCompat
 import androidx.fragment.app.Fragment
+import com.google.android.material.textview.MaterialTextView
 
 inline fun Activity.setContentView(ui: ViewManager.() -> Unit) =
     ActivityViewManager(this).apply(ui)
@@ -63,7 +63,7 @@ fun <VM : ViewManager, V : View> VM.add(
 }
 
 fun ViewManager.text(text: String) {
-    add(::TextView) {
+    add(::MaterialTextView) {
         this.text = text
         transformationMethod = null
     }
@@ -71,7 +71,7 @@ fun ViewManager.text(text: String) {
 
 fun ViewManager.button(
     text: String,
-    color: Int = Color.LTGRAY,
+    bgColor: Int = Color.LTGRAY,
     measureResult: Button.() -> Unit = {},
     listener: (View) -> Unit
 ) {
@@ -80,9 +80,8 @@ fun ViewManager.button(
         transformationMethod = null
         measureResult(this)
 
-        val bgDrawable = DrawableCompat.wrap(background)
-        DrawableCompat.setTint(bgDrawable, color)
-//        backgroundTintMode = ColorStateList.valueOf(color)
+//        DrawableCompat.setTint(DrawableCompat.wrap(background), bgColor)
+        backgroundTintList = ColorStateList.valueOf(bgColor)
         setOnClickListener(listener)
     }
 }
