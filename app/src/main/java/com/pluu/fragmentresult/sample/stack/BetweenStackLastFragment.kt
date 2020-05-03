@@ -8,30 +8,30 @@ import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
 import com.pluu.fragmentresult.sample.R
 import com.pluu.fragmentresult.sample.ResultConstract
-import com.pluu.fragmentresult.sample.databinding.FragmentBetweenLastBinding
+import com.pluu.fragmentresult.sample.databinding.FragmentBetweenStackLastBinding
 import com.pluu.util.prettyString
 
-class BetweenLastFragment : Fragment(R.layout.fragment_between_last) {
+class BetweenStackLastFragment : Fragment(R.layout.fragment_between_stack_last) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val binding = FragmentBetweenLastBinding.bind(view)
+        val binding = FragmentBetweenStackLastBinding.bind(view)
         binding.btnConfirm.setOnClickListener {
             setFragmentResult(
                 ResultConstract.keyRoot,
-                bundleOf("key_string" to "==> root", "Int" to 1)
+                bundleOf("key_string" to "==> root", "Int" to 0)
             )
             setFragmentResult(
-                ResultConstract.keyStack1,
-                bundleOf("key_string" to "==> stack1", "Int" to 2)
+                ResultConstract.keyStep1,
+                bundleOf("key_string" to "==> stack1", "Int" to 1)
             )
             setFragmentResult(
-                ResultConstract.keyStack2,
-                bundleOf("key_string" to "==> stack2", "Int" to 3)
+                ResultConstract.keyStep2,
+                bundleOf("key_string" to "==> stack2", "Int" to 2)
             )
             setFragmentResult(
                 "current",
-                bundleOf("key_string" to "==> current", "Int" to 4)
+                bundleOf("key_string" to "==> current", "Int" to 3)
             )
         }
 

@@ -6,8 +6,8 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.pluu.fragmentresult.sample.navigation.NavHomeFragment"
-        tools:layout="@layout/fragment_nav_home">
+        android:name="com.pluu.fragmentresult.sample.navigation.NavStep1Fragment"
+        tools:layout="@layout/fragment_nav_step1">
         <action
             android:id="@+id/action_to_nav1"
             app:destination="@id/nav1"
@@ -19,8 +19,8 @@
 
     <fragment
         android:id="@+id/nav1"
-        android:name="com.pluu.fragmentresult.sample.navigation.Nav1Fragment"
-        tools:layout="@layout/fragment_nav1">
+        android:name="com.pluu.fragmentresult.sample.navigation.NavStep2Fragment"
+        tools:layout="@layout/fragment_nav_step2">
         <action
             android:id="@+id/action_to_nav2"
             app:destination="@id/last"
@@ -31,6 +31,6 @@
     </fragment>
     <fragment
         android:id="@+id/last"
-        android:name="com.pluu.fragmentresult.sample.navigation.NavLastFragment"
-        tools:layout="@layout/fragment_nav_last" />
+        android:name="com.pluu.fragmentresult.sample.navigation.NavStepLastFragment"
+        tools:layout="@layout/fragment_nav_step_last" />
 </navigation>

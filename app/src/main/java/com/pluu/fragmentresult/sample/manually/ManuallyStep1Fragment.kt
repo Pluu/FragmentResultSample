@@ -9,6 +9,7 @@ import com.pluu.fragmentresult.sample.R
 import com.pluu.fragmentresult.sample.ResultConstract
 import com.pluu.fragmentresult.sample.databinding.FragmentManuallyStep1Binding
 import com.pluu.util.prettyString
+import com.pluu.util.toast
 import com.pluu.util.viewBinding
 
 class ManuallyStep1Fragment : Fragment(R.layout.fragment_manually_step1) {
@@ -20,17 +21,17 @@ class ManuallyStep1Fragment : Fragment(R.layout.fragment_manually_step1) {
 
         binding.btnNext.setOnClickListener {
             parentFragmentManager.commit {
-                replace(R.id.container, ManuallyLastFragment::class.java, null)
+                replace(R.id.container, ManuallyStep2Fragment::class.java, null)
                 addToBackStack(null)
             }
         }
 
-        binding.btnExit.setOnClickListener {
-            parentFragmentManager.popBackStack()
+        setFragmentResultListener(ResultConstract.keyStep1) { _, result ->
+            binding.tvResult.text = result.prettyString
         }
 
-        setFragmentResultListener(ResultConstract.keyStack1) { _, result ->
-            binding.tvResult.text = result.prettyString
+        setFragmentResultListener(ResultConstract.keyUnused) { _, result ->
+            toast("Unused key ==> ${result.prettyString}")
         }
     }
 }

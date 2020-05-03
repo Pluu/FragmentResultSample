@@ -6,7 +6,7 @@
     android:background="#E91E63"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".stack.BetweenStack1Fragment">
+    tools:context=".stack.BetweenStack2Fragment">
 
     <TextView
         android:id="@+id/tvLabel"
@@ -17,7 +17,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
-        android:name="com.pluu.fragmentresult.sample.stack.BetweenLastFragment"
+        android:name="com.pluu.fragmentresult.sample.stack.BetweenStackLastFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"

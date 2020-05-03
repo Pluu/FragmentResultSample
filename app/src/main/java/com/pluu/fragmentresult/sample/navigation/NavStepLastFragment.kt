@@ -8,24 +8,24 @@ import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import com.pluu.fragmentresult.sample.R
 import com.pluu.fragmentresult.sample.ResultConstract
-import com.pluu.fragmentresult.sample.databinding.FragmentNavLastBinding
+import com.pluu.fragmentresult.sample.databinding.FragmentNavStepLastBinding
 import com.pluu.util.toast
 import com.pluu.util.viewBinding
 
-class NavLastFragment : Fragment(R.layout.fragment_nav_last) {
+class NavStepLastFragment : Fragment(R.layout.fragment_nav_step_last) {
 
-    private val binding by viewBinding(FragmentNavLastBinding::bind)
+    private val binding by viewBinding(FragmentNavStepLastBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnConfirm.setOnClickListener {
             setFragmentResult(
-                ResultConstract.keyRoot,
-                bundleOf("key_string" to "==> root", "Int" to 1)
+                ResultConstract.keyStep1,
+                bundleOf("key_string" to "==> step1", "Int" to 1)
             )
             setFragmentResult(
-                ResultConstract.keyStack1,
-                bundleOf("key_string" to "==> stack1", "Int" to 2)
+                ResultConstract.keyStep2,
+                bundleOf("key_string" to "==> step2", "Int" to 2)
             )
             setFragmentResult(
                 ResultConstract.keyUnused,

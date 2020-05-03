@@ -7,28 +7,27 @@ import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 import com.pluu.fragmentresult.sample.R
 import com.pluu.fragmentresult.sample.ResultConstract
-import com.pluu.fragmentresult.sample.databinding.FragmentNavHomeBinding
+import com.pluu.fragmentresult.sample.databinding.FragmentNavStep2Binding
 import com.pluu.util.prettyString
-import com.pluu.util.toast
 import com.pluu.util.viewBinding
 
-class NavHomeFragment : Fragment(R.layout.fragment_nav_home) {
+class NavStep2Fragment : Fragment(R.layout.fragment_nav_step2) {
 
-    private val binding by viewBinding(FragmentNavHomeBinding::bind)
+    private val binding by viewBinding(FragmentNavStep2Binding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(R.id.action_to_nav1)
+            findNavController().navigate(R.id.action_to_nav2)
         }
 
-        setFragmentResultListener(ResultConstract.keyRoot) { _, result ->
+        binding.btnExit.setOnClickListener {
+            findNavController().navigateUp()
+        }
+
+        setFragmentResultListener(ResultConstract.keyStep2) { _, result ->
             binding.tvResult.text = result.prettyString
-        }
-
-        setFragmentResultListener(ResultConstract.keyUnused) { _, result ->
-            toast("Unused key ==> ${result.prettyString}")
         }
     }
 }

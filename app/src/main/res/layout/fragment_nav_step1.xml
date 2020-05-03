@@ -3,33 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#01579B"
     android:gravity="center_vertical"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".manually.ManuallyLastFragment">
+    tools:context=".navigation.NavStep1Fragment">
 
     <TextView
         android:id="@+id/tvResult"
         style="@style/TextLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Last" />
+        android:text="Step1 ~ Receive : wait" />
 
     <Button
-        android:id="@+id/btnConfirm"
-        style="@style/ConfirmStyle.Confirm"
+        android:id="@+id/btnNext"
+        style="@style/ConfirmStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Set Result" />
-
-    <Button
-        android:id="@+id/btnExit"
-        style="@style/ConfirmStyle.Exit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Exit" />
+        android:backgroundTint="#B00020"
+        android:text="Click Next" />
 
 </LinearLayout>

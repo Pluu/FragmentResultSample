@@ -15,7 +15,7 @@ class BetweenStack1Fragment : Fragment(R.layout.fragment_between_stack1) {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentBetweenStack1Binding.bind(view)
 
-        setChildFragmentResultListener(ResultConstract.keyStack1) { _, result ->
+        setChildFragmentResultListener(ResultConstract.keyStep1) { _, result ->
             binding.tvLabel.text = result.prettyString
         }
         setChildFragmentResultListener(ResultConstract.keyRoot) { resultKey, result ->

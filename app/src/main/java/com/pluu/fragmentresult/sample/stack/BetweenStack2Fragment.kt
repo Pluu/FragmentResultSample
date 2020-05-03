@@ -15,13 +15,13 @@ class BetweenStack2Fragment : Fragment(R.layout.fragment_between_stack2) {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentBetweenStack2Binding.bind(view)
 
-        setChildFragmentResultListener(ResultConstract.keyStack2) { _, result ->
+        setChildFragmentResultListener(ResultConstract.keyStep2) { _, result ->
             binding.tvLabel.text = result.prettyString
         }
         setChildFragmentResultListener(ResultConstract.keyRoot) { resultKey, result ->
             setFragmentResult(resultKey, result)
         }
-        setChildFragmentResultListener(ResultConstract.keyStack1) { resultKey, result ->
+        setChildFragmentResultListener(ResultConstract.keyStep1) { resultKey, result ->
             setFragmentResult(resultKey, result)
         }
     }

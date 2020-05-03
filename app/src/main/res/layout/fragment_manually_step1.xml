@@ -13,7 +13,7 @@
         style="@style/TextLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Stack1 ~ Receive : wait" />
+        android:text="Step1 ~ Receive : wait" />
 
     <Button
         android:id="@+id/btnNext"
@@ -21,15 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#00BFA5"
+        android:backgroundTint="#B00020"
         android:text="Click Next" />
-
-    <Button
-        android:id="@+id/btnExit"
-        style="@style/ConfirmStyle.Exit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Exit" />
 
 </LinearLayout>

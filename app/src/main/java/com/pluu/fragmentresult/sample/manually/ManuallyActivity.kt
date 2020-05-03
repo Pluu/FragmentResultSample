@@ -11,7 +11,7 @@ class ManuallyActivity : AppCompatActivity(R.layout.activity_manually) {
         supportActionBar?.elevation = 0f
 
         supportFragmentManager.commit {
-            add(R.id.container, ManuallyHomeFragment::class.java, null)
+            add(R.id.container, ManuallyStep1Fragment::class.java, null)
         }
     }
 }

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#01579B"
     android:padding="10dp"
-    tools:context=".stack.BetweenStack1Fragment">
+    tools:context=".stack.BetweenStackLastFragment">
 
     <TextView
         android:id="@+id/tvLabel"
