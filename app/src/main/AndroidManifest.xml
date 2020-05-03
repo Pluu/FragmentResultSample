@@ -19,6 +19,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".flexible.FlexibleStyleActivity"
+            android:label="Flexible Style" />
+        <activity
             android:name=".stack.BetweenStackActivity"
             android:label="Between Stack" />
         <activity

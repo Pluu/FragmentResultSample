@@ -6,11 +6,11 @@
     android:background="#01579B"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".old.flexible.OldFlexibleStyleActivity">
+    tools:context=".flexible.FlexibleStyleActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/master_fragment"
-        android:name="com.pluu.fragmentresult.sample.old.flexible.OldFlexibleMasterFragment"
+        android:name="com.pluu.fragmentresult.sample.flexible.FlexibleMasterFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -18,7 +18,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/detail_fragment"
-        android:name="com.pluu.fragmentresult.sample.old.flexible.OldFlexibleDetailFragment"
+        android:name="com.pluu.fragmentresult.sample.flexible.FlexibleDetailFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"

@@ -10,6 +10,7 @@ import androidx.core.view.setPadding
 import com.pluu.composer.add
 import com.pluu.composer.button
 import com.pluu.composer.setContentView
+import com.pluu.fragmentresult.sample.flexible.FlexibleStyleActivity
 import com.pluu.fragmentresult.sample.manually.ManuallyActivity
 import com.pluu.fragmentresult.sample.navigation.NavActivity
 import com.pluu.fragmentresult.sample.old.flexible.OldFlexibleStyleActivity
@@ -31,46 +32,66 @@ class MainActivity : AppCompatActivity() {
                 add(::LinearLayout) {
                     orientation = LinearLayout.VERTICAL
                     setPadding(dp2Px(10f))
-                    button(
-                        text = "Old ~ Flexible Style",
-                        measureResult = defaultButtonStyle
-                    ) {
-                        startActivity(
-                            Intent(
-                                this@MainActivity,
-                                OldFlexibleStyleActivity::class.java
-                            )
-                        )
-                    }
-                    button(
-                        text = "Old ~ Nested Style",
-                        measureResult = defaultButtonStyle
-                    ) {
-                        startActivity(Intent(this@MainActivity, OldStyleActivity::class.java))
-                    }
-                    button(
-                        text = "Manually Style",
-                        bgColor = 0xFF81D4FA.toInt(),
-                        measureResult = defaultButtonStyle
-                    ) {
-                        startActivity(Intent(this@MainActivity, ManuallyActivity::class.java))
-                    }
-                    button(
-                        text = "Navigation Style",
-                        bgColor = 0xFF81D4FA.toInt(),
-                        measureResult = defaultButtonStyle
-                    ) {
-                        startActivity(Intent(this@MainActivity, NavActivity::class.java))
-                    }
-                    button(
-                        text = "Crazy Stack ~ Between parent/child",
-                        bgColor = 0xFF81D4FA.toInt(),
-                        measureResult = defaultButtonStyle
-                    ) {
-                        startActivity(Intent(this@MainActivity, BetweenStackActivity::class.java))
-                    }
+                    bindOldPattern(defaultButtonStyle)
+                    bindNewPattern(defaultButtonStyle)
                 }
             }
+        }
+    }
+
+    private fun LinearLayout.bindOldPattern(defaultButtonStyle: Button.() -> Unit) {
+        button(
+            text = "Old ~ Flexible Style",
+            measureResult = defaultButtonStyle
+        ) {
+            startActivity(
+                Intent(
+                    this@MainActivity,
+                    OldFlexibleStyleActivity::class.java
+                )
+            )
+        }
+        button(
+            text = "Old ~ Nested Style",
+            measureResult = defaultButtonStyle
+        ) {
+            startActivity(Intent(this@MainActivity, OldStyleActivity::class.java))
+        }
+    }
+
+    private fun LinearLayout.bindNewPattern(defaultButtonStyle: Button.() -> Unit) {
+        button(
+            text = "Flexible Style",
+            bgColor = 0xFF81D4FA.toInt(),
+            measureResult = defaultButtonStyle
+        ) {
+            startActivity(
+                Intent(
+                    this@MainActivity,
+                    FlexibleStyleActivity::class.java
+                )
+            )
+        }
+        button(
+            text = "Manually Style",
+            bgColor = 0xFF81D4FA.toInt(),
+            measureResult = defaultButtonStyle
+        ) {
+            startActivity(Intent(this@MainActivity, ManuallyActivity::class.java))
+        }
+        button(
+            text = "Navigation Style",
+            bgColor = 0xFF81D4FA.toInt(),
+            measureResult = defaultButtonStyle
+        ) {
+            startActivity(Intent(this@MainActivity, NavActivity::class.java))
+        }
+        button(
+            text = "Crazy Stack ~ Between parent/child",
+            bgColor = 0xFF81D4FA.toInt(),
+            measureResult = defaultButtonStyle
+        ) {
+            startActivity(Intent(this@MainActivity, BetweenStackActivity::class.java))
         }
     }
 }
