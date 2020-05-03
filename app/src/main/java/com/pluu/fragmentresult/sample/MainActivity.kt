@@ -15,6 +15,7 @@ import com.pluu.fragmentresult.sample.manually.ManuallyActivity
 import com.pluu.fragmentresult.sample.navigation.NavActivity
 import com.pluu.fragmentresult.sample.old.flexible.OldFlexibleStyleActivity
 import com.pluu.fragmentresult.sample.old.nested.OldStyleActivity
+import com.pluu.fragmentresult.sample.old.targetfragment.OldTargetFragmentActivity
 import com.pluu.fragmentresult.sample.stack.BetweenStackActivity
 import com.pluu.util.dp2Px
 
@@ -44,18 +45,19 @@ class MainActivity : AppCompatActivity() {
             text = "Old ~ Flexible Style",
             measureResult = defaultButtonStyle
         ) {
-            startActivity(
-                Intent(
-                    this@MainActivity,
-                    OldFlexibleStyleActivity::class.java
-                )
-            )
+            startActivity(Intent(this@MainActivity, OldFlexibleStyleActivity::class.java))
         }
         button(
             text = "Old ~ Nested Style",
             measureResult = defaultButtonStyle
         ) {
             startActivity(Intent(this@MainActivity, OldStyleActivity::class.java))
+        }
+        button(
+            text = "Old ~ TargetFragment",
+            measureResult = defaultButtonStyle
+        ) {
+            startActivity(Intent(this@MainActivity, OldTargetFragmentActivity::class.java))
         }
     }
 
@@ -65,12 +67,7 @@ class MainActivity : AppCompatActivity() {
             bgColor = 0xFF81D4FA.toInt(),
             measureResult = defaultButtonStyle
         ) {
-            startActivity(
-                Intent(
-                    this@MainActivity,
-                    FlexibleStyleActivity::class.java
-                )
-            )
+            startActivity(Intent(this@MainActivity, FlexibleStyleActivity::class.java))
         }
         button(
             text = "Manually Style",

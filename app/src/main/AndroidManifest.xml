@@ -36,6 +36,8 @@
         <activity
             android:name=".old.nested.OldStyleActivity"
             android:label="Old ~ Nested Style" />
+        <activity android:name=".old.targetfragment.OldTargetFragmentActivity"
+            android:label="Old ~ TargetFragment" />
     </application>
 
 </manifest>
