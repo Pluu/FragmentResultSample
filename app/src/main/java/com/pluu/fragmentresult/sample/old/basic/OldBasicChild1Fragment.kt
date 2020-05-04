@@ -32,11 +32,12 @@ class OldBasicChild1Fragment : Fragment(R.layout.fragment_old_basic_child1),
     }
 
     override fun onResult(value: String) {
-        arguments = (arguments ?: Bundle()).also {
-            it.putString(keyRestore, value)
-        }
         if (isVisible) {
             bindText(value)
+        } else {
+            arguments = (arguments ?: Bundle()).also {
+                it.putString(keyRestore, value)
+            }
         }
     }
 
