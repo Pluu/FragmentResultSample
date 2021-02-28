@@ -43,7 +43,7 @@ class FragmentViewManager(
     override fun removeView(view: View?) {}
 }
 
-val ViewManager.context
+val ViewManager.context: Context
     get() = when (this) {
         is View -> context
         is ActivityViewManager -> activity
