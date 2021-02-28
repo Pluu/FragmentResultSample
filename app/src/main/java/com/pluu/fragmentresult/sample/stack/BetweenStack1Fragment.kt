@@ -18,8 +18,8 @@ class BetweenStack1Fragment : Fragment(R.layout.fragment_between_stack1) {
         setChildFragmentResultListener(ResultConstract.keyStep1) { _, result ->
             binding.tvLabel.text = result.prettyString
         }
-        setChildFragmentResultListener(ResultConstract.keyRoot) { resultKey, result ->
-            setFragmentResult(resultKey, result)
+        setChildFragmentResultListener(ResultConstract.keyRoot) { requestKey, result ->
+            setFragmentResult(requestKey, result)
         }
     }
 }
